@@ -25,34 +25,4 @@ public enum HoverEffect {
     case lift
 }
 
-@available(iOS 13.4, *)
-@available(tvOS, unavailable)
-@available(watchOS, unavailable)
-@available(OSX, unavailable)
-extension SwiftUI.HoverEffect {
-    public init(_ hoverEffect: HoverEffect) {
-        switch hoverEffect {
-            case .automatic:
-                self = .automatic
-            case .highlight:
-                self = .highlight
-            case .lift:
-                self = .lift
-        }
-    }
-}
-
-@available(iOS 13.4, *)
-@available(tvOS, unavailable)
-@available(watchOS, unavailable)
-@available(OSX, unavailable)
-extension View {
-    /// Applies a pointer hover effect to the view.
-    ///
-    /// - Note: the system may fall-back to a more appropriate effect.
-    public func hoverEffect(_ effect: HoverEffect) -> some View {
-        hoverEffect(SwiftUI.HoverEffect(effect))
-    }
-}
-
 #endif

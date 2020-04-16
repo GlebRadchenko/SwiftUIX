@@ -19,7 +19,7 @@ public struct _HoverEffectViewModifier: ViewModifier {
     @inlinable
     public func body(content: Content) -> some View {
         if #available(iOS 13.4, *) {
-            return content.hoverEffect(.init(hoverEffect))
+            return content
         } else {
             fatalError("Use View.hoverEffectIfAvailable instead.")
         }
